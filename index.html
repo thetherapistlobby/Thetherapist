@@ -73,7 +73,7 @@
   }
   .hero-bg {
     position: absolute; inset: 0; z-index: 0;
-    background: var(--black); /* Pure Solid Black Background as you wanted */
+    background: var(--black);
   }
   .hero-line {
     width: 1px; height: 80px; background: linear-gradient(to bottom, transparent, var(--gold));
@@ -100,22 +100,6 @@
     margin-top: 3rem; opacity: 0; animation: fadeUp 1s ease 0.9s forwards;
     display: flex; gap: 1.5rem; justify-content: center; flex-wrap: wrap;
   }
-  .btn-gold {
-    padding: 0.85rem 2.5rem; border: 1px solid var(--gold);
-    background: transparent; color: var(--gold);
-    font-family: 'Montserrat', sans-serif; font-size: 0.65rem;
-    letter-spacing: 0.25em; text-transform: uppercase; cursor: pointer;
-    transition: background 0.3s, color 0.3s; text-decoration: none; display: inline-block;
-  }
-  .btn-gold:hover { background: var(--gold); color: var(--black); }
-  .btn-outline {
-    padding: 0.85rem 2.5rem; border: 1px solid rgba(255,255,255,0.2);
-    background: transparent; color: var(--cream);
-    font-family: 'Montserrat', sans-serif; font-size: 0.65rem;
-    letter-spacing: 0.25em; text-transform: uppercase; cursor: pointer;
-    transition: border-color 0.3s, color 0.3s; text-decoration: none; display: inline-block;
-  }
-  .btn-outline:hover { border-color: var(--gold); color: var(--gold); }
 
   /* MARQUEE */
   .marquee-wrap {
@@ -155,215 +139,105 @@
 
   /* ABOUT */
   .about { background: var(--dark); }
-  .about-grid {
-    display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: center;
-  }
-  .about-body {
-    font-size: 0.9rem; line-height: 1.9; color: rgba(245,240,232,0.75);
-    font-weight: 300;
-  }
+  .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: center; }
+  .about-body { font-size: 0.9rem; line-height: 1.9; color: rgba(245,240,232,0.75); font-weight: 300; }
   .about-body p + p { margin-top: 1.2rem; }
-  .about-stats {
-    display: grid; grid-template-columns: 1fr 1fr; gap: 2px;
-  }
+  .about-stats { display: grid; grid-template-columns: 1fr 1fr; gap: 2px; }
   .stat-box {
     background: var(--dark2); padding: 2.5rem 2rem; text-align: center;
     border: 1px solid rgba(201,168,76,0.1);
     transition: border-color 0.3s, background 0.3s;
   }
   .stat-box:hover { border-color: rgba(201,168,76,0.4); background: var(--dark3); }
-  .stat-num {
-    font-family: 'Cormorant Garamond', serif; font-size: 2.8rem;
-    color: var(--gold); font-weight: 300; line-height: 1;
-  }
-  .stat-label {
-    font-size: 0.6rem; letter-spacing: 0.25em; text-transform: uppercase;
-    color: var(--text-muted); margin-top: 0.5rem;
-  }
+  .stat-num { font-family: 'Cormorant Garamond', serif; font-size: 2.8rem; color: var(--gold); font-weight: 300; line-height: 1; }
+  .stat-label { font-size: 0.6rem; letter-spacing: 0.25em; text-transform: uppercase; color: var(--text-muted); margin-top: 0.5rem; }
 
-  /* SERVICES */
+  /* SERVICES WITH IMAGES SETUP */
   .services { background: var(--black); }
   .services-intro { text-align: center; max-width: 600px; margin: 0 auto 4.5rem; }
   .services-grid {
     display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 20px;
+    gap: 25px;
   }
   .service-card {
-    background: var(--dark); border: 1px solid rgba(201,168,76,0.1);
+    background: var(--dark); border: 1px solid rgba(201,168,76,0.15);
     position: relative; overflow: hidden; display: flex; flex-direction: column;
     transition: transform 0.3s, border-color 0.3s;
   }
   .service-card:hover { transform: translateY(-5px); border-color: var(--gold); }
   .service-img {
-    width: 100%; height: 160px; object-fit: cover; opacity: 0.75;
+    width: 100%; height: 170px; object-fit: cover; opacity: 0.8;
     transition: opacity 0.3s; border-bottom: 1px solid rgba(201,168,76,0.15);
   }
-  .service-card:hover .service-img { opacity: 0.95; }
-  .service-content { padding: 2rem 1.8rem; display: flex; flex-direction: column; flex-grow: 1; }
-  .service-icon { font-size: 1.4rem; margin-bottom: 0.8rem; }
-  .service-title {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 1.3rem; font-weight: 400; color: var(--white); margin-bottom: 0.8rem;
-  }
-  .service-desc {
-    font-size: 0.78rem; line-height: 1.75; color: var(--text-muted); font-weight: 300; flex-grow: 1;
-  }
-  .service-tag {
-    display: inline-block; margin-top: 1.2rem;
-    font-size: 0.55rem; letter-spacing: 0.25em; text-transform: uppercase;
-    color: var(--gold); opacity: 0.7;
-  }
+  .service-card:hover .service-img { opacity: 1; }
+  .service-content { padding: 2.2rem 1.8rem; display: flex; flex-direction: column; flex-grow: 1; }
+  .service-icon { font-size: 1.5rem; margin-bottom: 0.8rem; display: block; }
+  .service-title { font-family: 'Cormorant Garamond', serif; font-size: 1.3rem; font-weight: 400; color: var(--white); margin-bottom: 0.8rem; }
+  .service-desc { font-size: 0.78rem; line-height: 1.75; color: var(--text-muted); font-weight: 300; flex-grow: 1; }
+  .service-tag { display: inline-block; margin-top: 1.2rem; font-size: 0.55rem; letter-spacing: 0.25em; text-transform: uppercase; color: var(--gold); opacity: 0.7; }
 
-  /* GAMING */
+  /* GAMING WITH IMAGE */
   .gaming {
-    background: var(--black); /* Clean Solid Black Background */
+    background: var(--black);
     border-top: 1px solid rgba(201,168,76,0.15);
     border-bottom: 1px solid rgba(201,168,76,0.15);
   }
-  .gaming-inner {
-    display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: center;
-  }
-  .gaming-body {
-    font-size: 0.85rem; line-height: 1.9; color: rgba(245,240,232,0.7); font-weight: 300;
-  }
+  .gaming-inner { display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: center; }
+  .gaming-body { font-size: 0.85rem; line-height: 1.9; color: rgba(245,240,232,0.7); font-weight: 300; }
   .gaming-list { list-style: none; margin-top: 1.5rem; }
   .gaming-list li {
     padding: 0.6rem 0; border-bottom: 1px solid rgba(201,168,76,0.1);
     font-size: 0.78rem; color: var(--cream); letter-spacing: 0.05em;
     display: flex; align-items: center; gap: 0.8rem;
   }
-  .gaming-list li::before {
-    content: ''; width: 6px; height: 6px; border-radius: 50%;
-    background: var(--gold); flex-shrink: 0;
-  }
-  .gaming-badge {
-    display: inline-block; padding: 0.4rem 1rem;
-    border: 1px solid var(--gold); color: var(--gold);
-    font-size: 0.55rem; letter-spacing: 0.3em; text-transform: uppercase;
-    margin-top: 2rem; background: rgba(10,10,10,0.6);
-  }
-  .gaming-visual {
-    position: relative; display: flex; align-items: center; justify-content: center;
-  }
-  .gaming-image-card {
-    width: 100%; max-width: 400px; height: 300px;
-    object-fit: cover; border: 1px solid var(--gold);
-    box-shadow: 0 0 25px rgba(201,168,76,0.3);
-  }
+  .gaming-list li::before { content: ''; width: 6px; height: 6px; border-radius: 50%; background: var(--gold); flex-shrink: 0; }
+  .gaming-badge { display: inline-block; padding: 0.4rem 1rem; border: 1px solid var(--gold); color: var(--gold); font-size: 0.55rem; letter-spacing: 0.3em; text-transform: uppercase; margin-top: 2rem; }
+  .gaming-visual { position: relative; display: flex; align-items: center; justify-content: center; }
+  .gaming-img-card { width: 100%; max-width: 420px; height: 320px; object-fit: cover; border: 1px solid var(--gold); box-shadow: 0 0 25px rgba(201,168,76,0.25); }
 
   /* TESTIMONIAL */
   .testimonial { background: var(--dark); text-align: center; }
-  .testimonial blockquote {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: clamp(1.3rem, 3vw, 2rem); font-style: italic;
-    font-weight: 300; color: var(--cream); line-height: 1.6;
-    max-width: 780px; margin: 0 auto; position: relative; padding: 2rem 0;
-  }
-  .testimonial blockquote::before {
-    content: '\201C'; font-size: 8rem; color: var(--gold); opacity: 0.2;
-    position: absolute; top: -2rem; left: -1rem; font-style: normal; line-height: 1;
-  }
-  .testimonial cite {
-    display: block; margin-top: 2rem;
-    font-family: 'Montserrat', sans-serif; font-size: 0.65rem;
-    letter-spacing: 0.25em; text-transform: uppercase; color: var(--gold);
-    font-style: normal;
-  }
+  .testimonial blockquote { font-family: 'Cormorant Garamond', serif; font-size: clamp(1.3rem, 3vw, 2rem); font-style: italic; font-weight: 300; color: var(--cream); line-height: 1.6; max-width: 780px; margin: 0 auto; position: relative; padding: 2rem 0; }
+  .testimonial blockquote::before { content: '\201C'; font-size: 8rem; color: var(--gold); opacity: 0.2; position: absolute; top: -2rem; left: -1rem; font-style: normal; line-height: 1; }
+  .testimonial cite { display: block; margin-top: 2rem; font-family: 'Montserrat', sans-serif; font-size: 0.65rem; letter-spacing: 0.25em; text-transform: uppercase; color: var(--gold); font-style: normal; }
 
-  /* CONTACT */
+  /* CONTACT & FORM */
   .contact { background: var(--black); }
   .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; }
-  .contact-info p {
-    font-size: 0.85rem; line-height: 1.9; color: rgba(245,240,232,0.65);
-    font-weight: 300; margin-bottom: 2rem;
-  }
-  .contact-detail {
-    display: flex; align-items: flex-start; gap: 1rem; margin-bottom: 1.2rem;
-  }
+  .contact-info p { font-size: 0.85rem; line-height: 1.9; color: rgba(245,240,232,0.65); font-weight: 300; margin-bottom: 2rem; }
+  .contact-detail { display: flex; align-items: flex-start; gap: 1rem; margin-bottom: 1.2rem; }
   .contact-detail-icon { font-size: 1rem; color: var(--gold); flex-shrink: 0; margin-top: 2px; }
-  .contact-detail-text {
-    font-size: 0.78rem; line-height: 1.6; color: var(--cream); font-weight: 300;
-  }
-  .contact-detail-label {
-    font-size: 0.55rem; letter-spacing: 0.25em; text-transform: uppercase;
-    color: var(--gold); display: block; margin-bottom: 0.2rem;
-  }
-  
-  /* FORM FIELDS SETUP */
+  .contact-detail-text { font-size: 0.78rem; line-height: 1.6; color: var(--cream); font-weight: 300; }
+  .contact-detail-label { font-size: 0.55rem; letter-spacing: 0.25em; text-transform: uppercase; color: var(--gold); display: block; margin-bottom: 0.2rem; }
   .contact-form { display: flex; flex-direction: column; gap: 1.2rem; }
   .form-group { display: flex; flex-direction: column; gap: 0.4rem; }
-  .form-label {
-    font-size: 0.6rem; letter-spacing: 0.25em; text-transform: uppercase; color: var(--gold);
-  }
-  .form-input, .form-textarea {
-    background: var(--dark); border: 1px solid rgba(201,168,76,0.2);
-    color: var(--cream); padding: 0.9rem 1.1rem;
-    font-family: 'Montserrat', sans-serif; font-size: 0.8rem; font-weight: 300;
-    outline: none; transition: border-color 0.3s; width: 100%;
-  }
+  .form-label { font-size: 0.6rem; letter-spacing: 0.25em; text-transform: uppercase; color: var(--gold); }
+  .form-input, .form-textarea { background: var(--dark); border: 1px solid rgba(201,168,76,0.2); color: var(--cream); padding: 0.9rem 1.1rem; font-family: 'Montserrat', sans-serif; font-size: 0.8rem; font-weight: 300; outline: none; transition: border-color 0.3s; width: 100%; }
   .form-input:focus, .form-textarea:focus { border-color: var(--gold); }
   .form-textarea { height: 120px; resize: vertical; }
   ::placeholder { color: rgba(245,240,232,0.2); }
 
   /* FOOTER */
-  footer {
-    background: var(--dark); padding: 3rem 2rem;
-    border-top: 1px solid rgba(201,168,76,0.15);
-  }
-  .footer-inner {
-    max-width: 1100px; margin: 0 auto;
-    display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap;
-    gap: 1.5rem;
-  }
-  .footer-logo {
-    font-family: 'Cormorant Garamond', serif; font-size: 1.1rem;
-    color: var(--gold); letter-spacing: 0.2em; text-transform: uppercase;
-  }
-  .footer-copy {
-    font-size: 0.6rem; letter-spacing: 0.15em;
-    color: var(--text-muted); text-align: center;
-  }
-  .footer-tagline {
-    font-family: 'Cormorant Garamond', serif; font-style: italic;
-    font-size: 0.85rem; color: rgba(201,168,76,0.5);
-  }
+  footer { background: var(--dark); padding: 3rem 2rem; border-top: 1px solid rgba(201,168,76,0.15); }
+  .footer-inner { max-width: 1100px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1.5rem; }
+  .footer-logo { font-family: 'Cormorant Garamond', serif; font-size: 1.1rem; color: var(--gold); letter-spacing: 0.2em; text-transform: uppercase; }
+  .footer-copy { font-size: 0.6rem; letter-spacing: 0.15em; color: var(--text-muted); text-align: center; }
+  .footer-tagline { font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 0.85rem; color: rgba(201,168,76,0.5); }
+  .gold-rule { width: 100%; height: 1px; background: linear-gradient(to right, transparent, var(--gold), transparent); opacity: 0.3; }
 
-  /* GOLD RULE */
-  .gold-rule {
-    width: 100%; height: 1px;
-    background: linear-gradient(to right, transparent, var(--gold), transparent);
-    opacity: 0.3;
-  }
+  @keyframes fadeUp { from { opacity: 0; transform: translateY(28px); } to { opacity: 1; transform: translateY(0); } }
+  @keyframes fadeDown { from { opacity: 0; transform: translateY(-20px); } to { opacity: 1; transform: translateY(0); } }
+  @keyframes marquee { from { transform: translateX(0); } to { transform: translateX(-50%); } }
 
-  /* ANIMATIONS */
-  @keyframes fadeUp {
-    from { opacity: 0; transform: translateY(28px); }
-    to   { opacity: 1; transform: translateY(0); }
-  }
-  @keyframes fadeDown {
-    from { opacity: 0; transform: translateY(-20px); }
-    to   { opacity: 1; transform: translateY(0); }
-  }
-  @keyframes marquee {
-    from { transform: translateX(0); }
-    to   { transform: translateX(-50%); }
-  }
-
-  /* REVEAL ON SCROLL */
-  .reveal {
-    opacity: 0; transform: translateY(30px);
-    transition: opacity 0.8s ease, transform 0.8s ease;
-  }
+  .reveal { opacity: 0; transform: translateY(30px); transition: opacity 0.8s ease, transform 0.8s ease; }
   .reveal.visible { opacity: 1; transform: translateY(0); }
 
-  /* RESPONSIVE */
   @media (max-width: 768px) {
     nav { padding: 1.2rem 1.5rem; }
     .nav-links { display: none; }
     .about-grid, .gaming-inner, .contact-grid { grid-template-columns: 1fr; gap: 3rem; }
     .about-stats { grid-template-columns: 1fr 1fr; }
     section { padding: 5rem 1.5rem; }
-    .gaming-visual { display: none; }
   }
 </style>
 </head>
@@ -372,33 +246,9 @@
 <nav>
   <div class="nav-logo">
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" width="44" height="44" style="flex-shrink:0;">
-  <defs>
-    <radialGradient id="nb" cx="50%" cy="40%" r="55%"><stop offset="0%" stop-color="#1a1507"/><stop offset="100%" stop-color="#0a0a0a"/></radialGradient>
-    <linearGradient id="ng" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#e8d5a3"/><stop offset="40%" stop-color="#c9a84c"/><stop offset="100%" stop-color="#8a6820"/></linearGradient>
-    <radialGradient id="ngl" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="#c9a84c" stop-opacity="0.18"/><stop offset="100%" stop-color="#c9a84c" stop-opacity="0"/></radialGradient>
-    <filter id="nf"><feGaussianBlur stdDeviation="3" result="blur"/><feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
-  </defs>
-  <circle cx="250" cy="250" r="250" fill="url(#nb)"/>
-  <ellipse cx="250" cy="220" rx="160" ry="130" fill="url(#ngl)"/>
-  <circle cx="250" cy="250" r="228" fill="none" stroke="url(#ng)" stroke-width="0.8" opacity="0.5"/>
-  <polygon points="250,30 255,38 250,46 245,38" fill="url(#ng)" opacity="0.8"/>
-  <polygon points="250,454 255,462 250,470 245,462" fill="url(#ng)" opacity="0.8"/>
-  <polygon points="30,250 38,255 46,250 38,245" fill="url(#ng)" opacity="0.8"/>
-  <polygon points="454,250 462,255 470,250 462,245" fill="url(#ng)" opacity="0.8"/>
-  <rect x="170" y="270" width="160" height="14" rx="7" fill="url(#ng)" opacity="0.9"/>
-  <rect x="178" y="284" width="8" height="22" rx="4" fill="url(#ng)" opacity="0.7"/>
-  <rect x="314" y="284" width="8" height="22" rx="4" fill="url(#ng)" opacity="0.7"/>
-  <rect x="175" y="248" width="150" height="26" rx="8" fill="url(#ng)" opacity="0.85"/>
-  <rect x="182" y="192" width="136" height="60" rx="10" fill="url(#ng)" opacity="0.9"/>
-  <rect x="190" y="196" width="120" height="6" rx="3" fill="#e8d5a3" opacity="0.3"/>
-  <rect x="163" y="230" width="22" height="44" rx="9" fill="url(#ng)" opacity="0.85"/>
-  <rect x="315" y="230" width="22" height="44" rx="9" fill="url(#ng)" opacity="0.85"/>
-  <rect x="196" y="202" width="108" height="44" rx="6" fill="#0a0a0a" opacity="0.55"/>
-  <text x="250" y="232" font-family="Palatino,Georgia,serif" font-size="28" font-weight="400" font-style="italic" fill="url(#ng)" text-anchor="middle" dominant-baseline="middle" filter="url(#nf)" opacity="0.95">TL</text>
-  <g opacity="0.55"><line x1="160" y1="168" x2="340" y2="168" stroke="url(#ng)" stroke-width="0.7"/></g>
-  <polygon points="148,248 153,252 148,256 143,252" fill="url(#ng)" opacity="0.6"/>
-  <polygon points="352,248 357,252 352,256 347,252" fill="url(#ng)" opacity="0.6"/>
-</svg>
+      <circle cx="250" cy="250" r="240" fill="#0a0a0a" stroke="#c9a84c" stroke-width="2"/>
+      <text x="250" y="270" font-family="'Cormorant Garamond', serif" font-size="140" fill="#c9a84c" font-weight="600" text-anchor="middle">TL</text>
+    </svg>
     The Therapist Lobby
   </div>
   <ul class="nav-links">
@@ -413,37 +263,6 @@
   <div class="hero-bg"></div>
   <div style="position:relative;z-index:1;width:100%;">
     <div class="hero-line"></div>
-    <div class="hero-logo-wrap show" id="heroLogoWrap">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" width="160" height="160" style="filter:drop-shadow(0 0 24px rgba(201,168,76,0.4));">
-  <defs>
-    <radialGradient id="hb" cx="50%" cy="40%" r="55%"><stop offset="0%" stop-color="#1a1507"/><stop offset="100%" stop-color="#0a0a0a"/></radialGradient>
-    <linearGradient id="hg" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#e8d5a3"/><stop offset="40%" stop-color="#c9a84c"/><stop offset="100%" stop-color="#8a6820"/></linearGradient>
-    <radialGradient id="hgl" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="#c9a84c" stop-opacity="0.18"/><stop offset="100%" stop-color="#c9a84c" stop-opacity="0"/></radialGradient>
-    <filter id="nf"><feGaussianBlur stdDeviation="3" result="blur"/><feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
-  </defs>
-  <circle cx="250" cy="250" r="250" fill="url(#hb)"/>
-  <ellipse cx="250" cy="220" rx="160" ry="130" fill="url(#hgl)"/>
-  <circle cx="250" cy="250" r="228" fill="none" stroke="url(#hg)" stroke-width="0.8" opacity="0.5"/>
-  <polygon points="250,30 255,38 250,46 245,38" fill="url(#hg)" opacity="0.8"/>
-  <polygon points="250,454 255,462 250,470 245,462" fill="url(#hg)" opacity="0.8"/>
-  <polygon points="30,250 38,255 46,250 38,245" fill="url(#hg)" opacity="0.8"/>
-  <polygon points="454,250 462,255 470,250 462,245" fill="url(#hg)" opacity="0.8"/>
-  <rect x="170" y="270" width="160" height="14" rx="7" fill="url(#hg)" opacity="0.9"/>
-  <rect x="178" y="284" width="8" height="22" rx="4" fill="url(#hg)" opacity="0.7"/>
-  <rect x="314" y="284" width="8" height="22" rx="4" fill="url(#hg)" opacity="0.7"/>
-  <rect x="175" y="248" width="150" height="26" rx="8" fill="url(#hg)" opacity="0.85"/>
-  <rect x="182" y="192" width="136" height="60" rx="10" fill="url(#hg)" opacity="0.9"/>
-  <rect x="190" y="196" width="120" height="6" rx="3" fill="#e8d5a3" opacity="0.3"/>
-  <rect x="163" y="230" width="22" height="44" rx="9" fill="url(#hg)" opacity="0.85"/>
-  <rect x="315" y="230" width="22" height="44" rx="9" fill="url(#hg)" opacity="0.85"/>
-  <rect x="196" y="202" width="108" height="44" rx="6" fill="#0a0a0a" opacity="0.55"/>
-  <text x="250" y="232" font-family="Palatino,Georgia,serif" font-size="28" font-weight="400" font-style="italic" fill="url(#hg)" text-anchor="middle" dominant-baseline="middle" filter="url(#hf)" opacity="0.95">TL</text>
-  <text x="250" y="342" font-family="Palatino,Georgia,serif" font-size="19" font-weight="600" letter-spacing="6" fill="url(#hg)" text-anchor="middle" dominant-baseline="middle" filter="url(#hf)">THE THERAPIST</text>
-  <line x1="148" y1="356" x2="352" y2="356" stroke="url(#hg)" stroke-width="0.6" opacity="0.5"/>
-  <text x="250" y="374" font-family="Palatino,Georgia,serif" font-size="13" font-weight="300" letter-spacing="12" fill="url(#hg)" text-anchor="middle" dominant-baseline="middle" opacity="0.8">LOBBY</text>
-  <text x="250" y="400" font-family="Palatino,Georgia,serif" font-size="8.5" font-style="italic" letter-spacing="2.5" fill="#c9a84c" text-anchor="middle" dominant-baseline="middle" opacity="0.6">Your One Click For Everything</text>
-</svg>
-    </div>
     <p class="hero-eyebrow">Premium Business & Creative Services</p>
     <h1 class="hero-title">The <em>Therapist</em><br>Lobby</h1>
     <p class="hero-subtitle">Your One-Click Solution — Where Every Need Finds Its Answer</p>
@@ -460,10 +279,6 @@
     <span>Real Estate</span><span>Company Profiles</span><span>Typesetting</span>
     <span>Video Editing</span><span>Legal Documents</span><span>Gaming Services</span>
     <span>Web Design</span><span>Transcription</span><span>Photo Editing</span>
-    <span>Graphic Design</span><span>Flight Booking</span><span>NIN Services</span>
-    <span>Real Estate</span><span>Company Profiles</span><span>Typesetting</span>
-    <span>Video Editing</span><span>Legal Documents</span><span>Gaming Services</span>
-    <span>Web Design</span><span>Transcription</span><span>Photo Editing</span>
   </div>
 </div>
 
@@ -476,26 +291,14 @@
         <div class="divider left"></div>
         <div class="about-body">
           <p>The Therapist Lobby is a premium multi-service hub built for individuals and businesses who demand quality, speed, and reliability — all in one place. We are your single point of contact for design, documentation, travel, property, and digital services.</p>
-          <p>Whether you're launching a brand, booking a flight, legalizing a document, or levelling up your gaming profile — we handle it all with precision and professionalism. No runaround. No middlemen. Just results.</p>
+          <p>Whether you're launching a brand, booking a flight, legalizing a document, or levelling up your gaming profile — we handle it all with precision and professionalism.</p>
         </div>
       </div>
       <div class="about-stats">
-        <div class="stat-box">
-          <div class="stat-num">15+</div>
-          <div class="stat-label">Service Categories</div>
-        </div>
-        <div class="stat-box">
-          <div class="stat-num">100%</div>
-          <div class="stat-label">Client Focused</div>
-        </div>
-        <div class="stat-box">
-          <div class="stat-num">24/7</div>
-          <div class="stat-label">Availability</div>
-        </div>
-        <div class="stat-box">
-          <div class="stat-num">1</div>
-          <div class="stat-label">Click Away</div>
-        </div>
+        <div class="stat-box"><div class="stat-num">15+</div><div class="stat-label">Categories</div></div>
+        <div class="stat-box"><div class="stat-num">100%</div><div class="stat-label">Focused</div></div>
+        <div class="stat-box"><div class="stat-num">24/7</div><div class="stat-label">Available</div></div>
+        <div class="stat-box"><div class="stat-num">1</div><div class="stat-label">Click Away</div></div>
       </div>
     </div>
   </div>
@@ -510,102 +313,33 @@
     </div>
     <div class="services-grid reveal">
 
-      <!-- Graphic Design -->
       <div class="service-card">
         <img class="service-img" src="https://images.unsplash.com/photo-1626785774573-4b799315345d?q=80&w=500&auto=format&fit=crop" alt="Graphic Design">
         <div class="service-content">
           <span class="service-icon">🎨</span>
           <h3 class="service-title">Graphic Design</h3>
-          <p class="service-desc">Professional logos, banners, flyers, stickers, and branded materials crafted to make your business stand out. Full-service visual identity creation.</p>
+          <p class="service-desc">Professional logos, banners, flyers, stickers, and branded materials crafted to make your business stand out.</p>
           <span class="service-tag">Logos · Banners · Flyers</span>
         </div>
       </div>
 
-      <!-- Web & Digital Design -->
       <div class="service-card">
         <img class="service-img" src="https://images.unsplash.com/photo-1547658719-da2b81166b58?q=80&w=500&auto=format&fit=crop" alt="Web Design">
         <div class="service-content">
           <span class="service-icon">🌐</span>
           <h3 class="service-title">Web & Digital Design</h3>
-          <p class="service-desc">Web design editing, digital asset creation, and frontend interface configurations tailored for your online presence.</p>
+          <p class="service-desc">Web design editing, digital asset creation, and frontend configurations tailored for your online presence.</p>
           <span class="service-tag">Web Design · Digital Assets</span>
         </div>
       </div>
 
-      <!-- Business Documentation -->
       <div class="service-card">
         <img class="service-img" src="https://images.unsplash.com/photo-1450133064473-71024230f91b?q=80&w=500&auto=format&fit=crop" alt="Documentation">
         <div class="service-content">
           <span class="service-icon">📋</span>
           <h3 class="service-title">Business Documentation</h3>
-          <p class="service-desc">Comprehensive company profiles, agreements, deeds, and all formal business documentation prepared to professional standards.</p>
-          <span class="service-tag">Profiles · Agreements · Deeds</span>
-        </div>
-      </div>
-
-      <!-- Flight Booking -->
-      <div class="service-card">
-        <img class="service-img" src="https://images.unsplash.com/photo-1436491865332-7a61a109cc05?q=80&w=500&auto=format&fit=crop" alt="Flight Booking">
-        <div class="service-content">
-          <span class="service-icon">✈️</span>
-          <h3 class="service-title">Flight Booking</h3>
-          <p class="service-desc">Seamless booking of local and international flights. We handle the search, comparison, and reservation swiftly.</p>
-          <span class="service-tag">Local · International</span>
-        </div>
-      </div>
-
-      <!-- NIN Services -->
-      <div class="service-card">
-        <img class="service-img" src="https://images.unsplash.com/photo-1554774853-aae0a22c8aa4?q=80&w=500&auto=format&fit=crop" alt="NIN Validation">
-        <div class="service-content">
-          <span class="service-icon">🪪</span>
-          <h3 class="service-title">NIN Services</h3>
-          <p class="service-desc">Official NIN validation and reprinting of lost National Identification Numbers. Quick and properly handled.</p>
-          <span class="service-tag">Validation · Reprinting</span>
-        </div>
-      </div>
-
-      <!-- Real Estate -->
-      <div class="service-card">
-        <img class="service-img" src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?q=80&w=500&auto=format&fit=crop" alt="Real Estate">
-        <div class="service-content">
-          <span class="service-icon">🏠</span>
-          <h3 class="service-title">Real Estate & Assets</h3>
-          <p class="service-desc">Facilitation of buying and selling of land, houses, and vehicles. We connect buyers and sellers with confidence.</p>
-          <span class="service-tag">Land · Houses · Cars</span>
-        </div>
-      </div>
-
-      <!-- Typesetting -->
-      <div class="service-card">
-        <img class="service-img" src="https://images.unsplash.com/photo-1506880018603-83d5b814b5a6?q=80&w=500&auto=format&fit=crop" alt="Typesetting">
-        <div class="service-content">
-          <span class="service-icon">📝</span>
-          <h3 class="service-title">Typesetting & Projects</h3>
-          <p class="service-desc">Professional typesetting, proofreading, transcription, and project work. Clean documents and polished formatting every time.</p>
-          <span class="service-tag">Typesetting · Transcription</span>
-        </div>
-      </div>
-
-      <!-- Google Business -->
-      <div class="service-card">
-        <img class="service-img" src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=500&auto=format&fit=crop" alt="Google SEO">
-        <div class="service-content">
-          <span class="service-icon">📍</span>
-          <h3 class="service-title">Google Business</h3>
-          <p class="service-desc">Get your business found on Google Maps. We handle your Google Business Profile registration for local visibility.</p>
-          <span class="service-tag">Maps Registration · SEO</span>
-        </div>
-      </div>
-
-      <!-- Photo & Video Editing -->
-      <div class="service-card">
-        <img class="service-img" src="https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?q=80&w=500&auto=format&fit=crop" alt="Video Editing">
-        <div class="service-content">
-          <span class="service-icon">🎬</span>
-          <h3 class="service-title">Photo & Video Editing</h3>
-          <p class="service-desc">Creative photo editing, face swaps, passport/visa adjustments, video optimization, and premium visual layout work.</p>
-          <span class="service-tag">Photos · Videos · Edits</span>
+          <p class="service-desc">Comprehensive company profiles, agreements, deeds, and formal business documentation prepared perfectly.</p>
+          <span class="service-tag">Profiles · Agreements</span>
         </div>
       </div>
 
@@ -620,7 +354,7 @@
         <span class="section-label">For Gamers</span>
         <h2 class="section-title">Call of Duty <em>Services</em></h2>
         <div class="divider left"></div>
-        <p class="gaming-body">We cater to the gaming community with a full suite of Call of Duty account services. Whether you need a fresh account, CP, a Battle Pass, or a fully grinded camo — we deliver with speed and integrity.</p>
+        <p class="gaming-body">We cater to the gaming community with a full suite of Call of Duty account services. High speeds and secure delivery.</p>
         <ul class="gaming-list">
           <li>Buying & Selling of Call of Duty Accounts</li>
           <li>CP (CoD Points) Supply</li>
@@ -630,20 +364,9 @@
         <span class="gaming-badge">Level Up with The Therapist</span>
       </div>
       <div class="gaming-visual">
-        <img class="gaming-image-card" src="https://images.unsplash.com/photo-1552820728-8b83bb6b773f?q=80&w=600&auto=format&fit=crop" alt="CODM Gaming Setup">
+        <img class="gaming-img-card" src="https://images.unsplash.com/photo-1552820728-8b83bb6b773f?q=80&w=600&auto=format&fit=crop" alt="CODM Gaming Setup">
       </div>
     </div>
-  </div>
-</section>
-
-<section class="testimonial">
-  <div class="container reveal">
-    <div class="divider"></div>
-    <blockquote>
-      "The Therapist Lobby handled our company profile, booked our flights, and designed our branding — all at once. Effortless, professional, and truly a one-stop solution."
-      <cite>— A Satisfied Client</cite>
-    </blockquote>
-    <div class="divider" style="margin-top:2rem;"></div>
   </div>
 </section>
 
@@ -654,51 +377,27 @@
         <span class="section-label">Reach Us</span>
         <h2 class="section-title">Let's <em>Work</em><br>Together</h2>
         <div class="divider left"></div>
-        <p>Ready to get started? Whether you need a logo, a flight ticket, a legal document, or a game account — reach out and we'll handle the rest.</p>
-
-        <div class="contact-detail">
-          <span class="contact-detail-icon">📱</span>
-          <div class="contact-detail-text">
-            <span class="contact-detail-label">Phone / WhatsApp</span>
-            +2349074041752
-          </div>
-        </div>
-        <div class="contact-detail">
-          <span class="contact-detail-icon">✉️</span>
-          <div class="contact-detail-text">
-            <span class="contact-detail-label">Email</span>
-            thetherapistlobby@gmail.com
-          </div>
-        </div>
-        <div class="contact-detail">
-          <span class="contact-detail-icon">📍</span>
-          <div class="contact-detail-text">
-            <span class="contact-detail-label">Location</span>
-            NIGERIA
-          </div>
-        </div>
+        <p>Ready to get started? Reach out and we'll handle the rest.</p>
+        <div class="contact-detail"><span class="contact-detail-icon">📱</span><div class="contact-detail-text"><span class="contact-detail-label">Phone / WhatsApp</span>+2349074041752</div></div>
+        <div class="contact-detail"><span class="contact-detail-icon">✉️</span><div class="contact-detail-text"><span class="contact-detail-label">Email</span>thetherapistlobby@gmail.com</div></div>
       </div>
 
       <div>
-        <div class="contact-form">
+        <form action="https://formspree.io/f/your-form-id" method="POST" class="contact-form">
           <div class="form-group">
             <label class="form-label">Full Name</label>
-            <input type="text" id="form-name" class="form-input" placeholder="Your name" />
+            <input type="text" name="name" class="form-input" placeholder="Your name" required />
           </div>
           <div class="form-group">
             <label class="form-label">Email Address</label>
-            <input type="email" id="form-email" class="form-input" placeholder="your@email.com" />
-          </div>
-          <div class="form-group">
-            <label class="form-label">Service Needed</label>
-            <input type="text" id="form-service" class="form-input" placeholder="e.g. Logo Design, Flight Booking..." />
+            <input type="email" name="email" class="form-input" placeholder="your@email.com" required />
           </div>
           <div class="form-group">
             <label class="form-label">Message</label>
-            <textarea id="form-message" class="form-textarea" placeholder="Tell us about your project or request..."></textarea>
+            <textarea name="message" class="form-textarea" placeholder="Tell us about your project..." required></textarea>
           </div>
-          <button id="sendBtn" class="btn-gold" style="width:100%;padding:1rem;">Send Message</button>
-        </div>
+          <button type="submit" class="btn-gold" style="width:100%;padding:1rem;">Send Message</button>
+        </form>
       </div>
     </div>
   </div>
@@ -709,68 +408,15 @@
   <div class="footer-inner">
     <div class="footer-logo">The Therapist Lobby</div>
     <div class="footer-copy">© 2026 The Therapist Lobby. All rights reserved.</div>
-    <div class="footer-tagline">Your one click for everything.</div>
   </div>
 </footer>
 
 <script>
-  // Scroll reveal observer
   const reveals = document.querySelectorAll('.reveal');
   const observer = new IntersectionObserver((entries) => {
-    entries.forEach(e => {
-      if (e.isIntersecting) { e.target.classList.add('visible'); }
-    });
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); } });
   }, { threshold: 0.12 });
   reveals.forEach(r => observer.observe(r));
-
-  // Smooth scroll links
-  document.querySelectorAll('a[href^="#"]').forEach(a => {
-    a.addEventListener('click', e => {
-      e.preventDefault();
-      const target = document.querySelector(a.getAttribute('href'));
-      if (target) target.scrollIntoView({ behavior: 'smooth' });
-    });
-  });
-
-  // CONNECTED DATABASE WIRE FUNCTION
-  document.getElementById('sendBtn').addEventListener('click', async () => {
-    const name = document.getElementById('form-name').value;
-    const email = document.getElementById('form-email').value;
-    const service = document.getElementById('form-service').value;
-    const message = document.getElementById('form-message').value;
-
-    if(!name || !email || !message) {
-      alert('Bros, fill all the important spaces first!');
-      return;
-    }
-
-    const btn = document.getElementById('sendBtn');
-    btn.innerText = "Sending...";
-    btn.disabled = true;
-
-    try {
-      const response = await fetch('https://your-laravel-backend.onrender.com/api/messages', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ name, email, service, message })
-      });
-
-      if(response.ok) {
-        alert('Message don drop for database successfully!');
-        document.getElementById('form-name').value = '';
-        document.getElementById('form-email').value = '';
-        document.getElementById('form-service').value = '';
-        document.getElementById('form-message').value = '';
-      } else {
-        alert('Something catch face, try again later.');
-      }
-    } catch (error) {
-      alert('Connection problem, check your internet.');
-    }
-
-    btn.innerText = "Send Message";
-    btn.disabled = false;
-  });
 </script>
 </body>
 </html>
