@@ -3,7 +3,63 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>The Therapist Lobby</title>
+
+<!-- ======= PRIMARY SEO ======= -->
+<title>The Therapist Lobby | Graphic Design, Flight Booking, NIN, Real Estate & More</title>
+<meta name="description" content="The Therapist Lobby — Graphic design (logos, banners, flyers, stickers, photo editing, web design), Company Profiles, Agreements & Deeds, Buying & Selling of Land, Houses & Cars, Typesetting, Proofreading, Transcription, Project Work, Flight Booking (local & international), NIN validation & reprinting, Google Business Profile registration, Call of Duty accounts, CP, Battle Pass & camo grinding. Your one click for everything." />
+<meta name="keywords" content="The Therapist Lobby, graphic design Nigeria, logo design, banner design, flyer design, sticker design, photo editing, web design editing, company profile, agreements and deeds, buying and selling land, buying and selling houses, buying and selling cars, real estate Nigeria, typesetting, proofreading, transcription, project work, flight booking Nigeria, local flight booking, international flight booking, NIN validation, NIN reprinting, lost NIN reprint, Google profile registration, Google Business registration, Call of Duty accounts, COD CP, Battle Pass, camo grinding, The Therapist" />
+<meta name="author" content="The Therapist Lobby" />
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+<link rel="canonical" href="https://thetherapistlobby.com/" />
+
+<!-- ======= OPEN GRAPH (WhatsApp, Facebook previews) ======= -->
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="The Therapist Lobby" />
+<meta property="og:title" content="The Therapist Lobby | Your One Click For Everything" />
+<meta property="og:description" content="Graphic design, company profiles, flight booking, NIN services, real estate, typesetting, Google Business registration, Call of Duty accounts & more. The Therapist Lobby — your one-click premium service hub." />
+<meta property="og:url" content="https://thetherapistlobby.com/" />
+
+<!-- ======= TWITTER / X CARD ======= -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="The Therapist Lobby | Your One Click For Everything" />
+<meta name="twitter:description" content="Graphic design, flight booking, NIN services, real estate, Call of Duty accounts & more. Premium multi-service hub." />
+
+<!-- ======= SUPPRESS UNRELATED SOCIAL MEDIA SITELINKS ======= -->
+<meta name="google" content="nositelinkssearchbox" />
+<meta name="google" content="nopagereadaloud" />
+
+<!-- ======= STRUCTURED DATA (Google Rich Results) ======= -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "The Therapist Lobby",
+  "alternateName": "The Therapist",
+  "description": "Graphic design (logos, banners, flyers, stickers, pictures editing and web design editing), Company Profile, Agreements and Deeds, Buying and Selling of Lands, Houses, Cars, Typesetting, Proofreading, Transcription, Project Work, Booking of Flights (local and international), NIN validation and reprinting of lost NIN, Google Business Profile registration, Buying and Selling of Call of Duty Accounts, CP, Battle Pass, grinding of camos and accounts.",
+  "url": "https://thetherapistlobby.com/",
+  "email": "thetherapistlobby@gmail.com",
+  "priceRange": "$$",
+  "serviceArea": {
+    "@type": "Country",
+    "name": "Nigeria"
+  },
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Services",
+    "itemListElement": [
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Graphic Design — Logos, Banners, Flyers, Stickers, Photo Editing, Web Design" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Company Profile, Agreements and Deeds" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Buying and Selling of Land, Houses, Cars" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Typesetting, Proofreading, Transcription, Project Work" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Local and International Flight Booking" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "NIN Validation and Reprinting of Lost NIN" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Google Business Profile Registration" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Call of Duty Accounts, CP, Battle Pass, Camo Grinding" } }
+    ]
+  }
+}
+</script>
+
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet"/>
 <style>
   *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
@@ -51,11 +107,31 @@
   }
   .nav-logo svg { border-radius: 4px; }
 
+  /* LOGO UPLOAD BUTTON - removed */
+  .logo-upload-btn-unused {
+    position: fixed; bottom: 1.8rem; right: 1.8rem; z-index: 200;
+    background: var(--gold); color: var(--black);
+    border: none; padding: 0.75rem 1.3rem;
+    font-family: 'Montserrat', sans-serif; font-size: 0.6rem;
+    letter-spacing: 0.2em; text-transform: uppercase; cursor: pointer;
+    display: flex; align-items: center; gap: 0.5rem;
+    box-shadow: 0 4px 20px rgba(201,168,76,0.4);
+    transition: background 0.3s, transform 0.2s;
+  }
+  .logo-upload-btn:hover { background: var(--gold-light); transform: translateY(-2px); }
+  #logoFileInput { display: none; }
+
+  /* HERO LOGO DISPLAY */
   .hero-logo-wrap {
     margin-bottom: 1.5rem; display: block;
     animation: fadeUp 0.8s ease forwards;
   }
   .hero-logo-wrap.show { display: block; }
+  .hero-logo-img {
+    max-height: 100px; max-width: 260px;
+    object-fit: contain; border-radius: 6px;
+    filter: drop-shadow(0 0 18px rgba(201,168,76,0.35));
+  }
   .nav-links { display: flex; gap: 2.5rem; list-style: none; }
   .nav-links a {
     font-size: 0.68rem; letter-spacing: 0.2em; text-transform: uppercase;
@@ -73,7 +149,10 @@
   }
   .hero-bg {
     position: absolute; inset: 0; z-index: 0;
-    background: var(--black);
+    background:
+      radial-gradient(ellipse 80% 60% at 50% 30%, rgba(201,168,76,0.08) 0%, transparent 70%),
+      radial-gradient(ellipse 40% 40% at 20% 80%, rgba(201,168,76,0.05) 0%, transparent 60%),
+      linear-gradient(160deg, #0a0a0a 0%, #111 50%, #0d0b07 100%);
   }
   .hero-line {
     width: 1px; height: 80px; background: linear-gradient(to bottom, transparent, var(--gold));
@@ -100,6 +179,22 @@
     margin-top: 3rem; opacity: 0; animation: fadeUp 1s ease 0.9s forwards;
     display: flex; gap: 1.5rem; justify-content: center; flex-wrap: wrap;
   }
+  .btn-gold {
+    padding: 0.85rem 2.5rem; border: 1px solid var(--gold);
+    background: transparent; color: var(--gold);
+    font-family: 'Montserrat', sans-serif; font-size: 0.65rem;
+    letter-spacing: 0.25em; text-transform: uppercase; cursor: pointer;
+    transition: background 0.3s, color 0.3s; text-decoration: none; display: inline-block;
+  }
+  .btn-gold:hover { background: var(--gold); color: var(--black); }
+  .btn-outline {
+    padding: 0.85rem 2.5rem; border: 1px solid rgba(255,255,255,0.2);
+    background: transparent; color: var(--cream);
+    font-family: 'Montserrat', sans-serif; font-size: 0.65rem;
+    letter-spacing: 0.25em; text-transform: uppercase; cursor: pointer;
+    transition: border-color 0.3s, color 0.3s; text-decoration: none; display: inline-block;
+  }
+  .btn-outline:hover { border-color: var(--gold); color: var(--gold); }
 
   /* MARQUEE */
   .marquee-wrap {
@@ -139,116 +234,291 @@
 
   /* ABOUT */
   .about { background: var(--dark); }
-  .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: center; }
-  .about-body { font-size: 0.9rem; line-height: 1.9; color: rgba(245,240,232,0.75); font-weight: 300; }
+  .about-grid {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: center;
+  }
+  .about-body {
+    font-size: 0.9rem; line-height: 1.9; color: rgba(245,240,232,0.75);
+    font-weight: 300;
+  }
   .about-body p + p { margin-top: 1.2rem; }
-  .about-stats { display: grid; grid-template-columns: 1fr 1fr; gap: 2px; }
+  .about-stats {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 2px;
+  }
   .stat-box {
     background: var(--dark2); padding: 2.5rem 2rem; text-align: center;
     border: 1px solid rgba(201,168,76,0.1);
     transition: border-color 0.3s, background 0.3s;
   }
   .stat-box:hover { border-color: rgba(201,168,76,0.4); background: var(--dark3); }
-  .stat-num { font-family: 'Cormorant Garamond', serif; font-size: 2.8rem; color: var(--gold); font-weight: 300; line-height: 1; }
-  .stat-label { font-size: 0.6rem; letter-spacing: 0.25em; text-transform: uppercase; color: var(--text-muted); margin-top: 0.5rem; }
+  .stat-num {
+    font-family: 'Cormorant Garamond', serif; font-size: 2.8rem;
+    color: var(--gold); font-weight: 300; line-height: 1;
+  }
+  .stat-label {
+    font-size: 0.6rem; letter-spacing: 0.25em; text-transform: uppercase;
+    color: var(--text-muted); margin-top: 0.5rem;
+  }
 
-  /* SERVICES WITH IMAGES SETUP */
+  /* SERVICES */
   .services { background: var(--black); }
   .services-intro { text-align: center; max-width: 600px; margin: 0 auto 4.5rem; }
   .services-grid {
     display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 25px;
+    gap: 1px; background: rgba(201,168,76,0.1);
   }
   .service-card {
-    background: var(--dark); border: 1px solid rgba(201,168,76,0.15);
-    position: relative; overflow: hidden; display: flex; flex-direction: column;
-    transition: transform 0.3s, border-color 0.3s;
+    background: var(--dark); padding: 2.8rem 2.5rem;
+    position: relative; overflow: hidden;
+    transition: background 0.35s;
   }
-  .service-card:hover { transform: translateY(-5px); border-color: var(--gold); }
-  .service-img {
-    width: 100%; height: 170px; object-fit: cover; opacity: 0.8;
-    transition: opacity 0.3s; border-bottom: 1px solid rgba(201,168,76,0.15);
+  .service-card::before {
+    content: ''; position: absolute; top: 0; left: 0;
+    width: 3px; height: 0; background: var(--gold);
+    transition: height 0.4s ease;
   }
-  .service-card:hover .service-img { opacity: 1; }
-  .service-content { padding: 2.2rem 1.8rem; display: flex; flex-direction: column; flex-grow: 1; }
-  .service-icon { font-size: 1.5rem; margin-bottom: 0.8rem; display: block; }
-  .service-title { font-family: 'Cormorant Garamond', serif; font-size: 1.3rem; font-weight: 400; color: var(--white); margin-bottom: 0.8rem; }
-  .service-desc { font-size: 0.78rem; line-height: 1.75; color: var(--text-muted); font-weight: 300; flex-grow: 1; }
-  .service-tag { display: inline-block; margin-top: 1.2rem; font-size: 0.55rem; letter-spacing: 0.25em; text-transform: uppercase; color: var(--gold); opacity: 0.7; }
+  .service-card:hover { background: var(--dark2); }
+  .service-card:hover::before { height: 100%; }
+  .service-icon {
+    font-size: 1.6rem; margin-bottom: 1.2rem; display: block;
+  }
+  .service-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.25rem; font-weight: 400; color: var(--white); margin-bottom: 0.8rem;
+  }
+  .service-desc {
+    font-size: 0.78rem; line-height: 1.75; color: var(--text-muted); font-weight: 300;
+  }
+  .service-tag {
+    display: inline-block; margin-top: 1.2rem;
+    font-size: 0.55rem; letter-spacing: 0.25em; text-transform: uppercase;
+    color: var(--gold); opacity: 0.7;
+  }
 
-  /* GAMING WITH IMAGE */
+  /* SERVICE GALLERY */
+  .service-gallery {
+    display: grid; grid-template-columns: repeat(5, 1fr); gap: 5px;
+    margin-top: 1.4rem;
+  }
+  .service-gallery img {
+    width: 100%; aspect-ratio: 1/1; object-fit: cover;
+    border-radius: 3px; filter: grayscale(25%) brightness(0.88);
+    transition: filter 0.35s, transform 0.35s;
+    border: 1px solid rgba(201,168,76,0.15);
+  }
+  .service-gallery img:hover {
+    filter: grayscale(0%) brightness(1); transform: scale(1.04);
+  }
+  @media (max-width: 480px) {
+    .service-gallery { grid-template-columns: repeat(5, 1fr); gap: 3px; }
+  }
+
+  /* GAMING */
   .gaming {
-    background: var(--black);
+    background: linear-gradient(135deg, #0a0a0a 0%, #0d0b07 50%, #0a0a0a 100%);
     border-top: 1px solid rgba(201,168,76,0.15);
     border-bottom: 1px solid rgba(201,168,76,0.15);
   }
-  .gaming-inner { display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: center; }
-  .gaming-body { font-size: 0.85rem; line-height: 1.9; color: rgba(245,240,232,0.7); font-weight: 300; }
+  .gaming-inner {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: center;
+  }
+  .gaming-body {
+    font-size: 0.85rem; line-height: 1.9; color: rgba(245,240,232,0.7); font-weight: 300;
+  }
   .gaming-list { list-style: none; margin-top: 1.5rem; }
   .gaming-list li {
     padding: 0.6rem 0; border-bottom: 1px solid rgba(201,168,76,0.1);
     font-size: 0.78rem; color: var(--cream); letter-spacing: 0.05em;
     display: flex; align-items: center; gap: 0.8rem;
   }
-  .gaming-list li::before { content: ''; width: 6px; height: 6px; border-radius: 50%; background: var(--gold); flex-shrink: 0; }
-  .gaming-badge { display: inline-block; padding: 0.4rem 1rem; border: 1px solid var(--gold); color: var(--gold); font-size: 0.55rem; letter-spacing: 0.3em; text-transform: uppercase; margin-top: 2rem; }
-  .gaming-visual { position: relative; display: flex; align-items: center; justify-content: center; }
-  .gaming-img-card { width: 100%; max-width: 420px; height: 320px; object-fit: cover; border: 1px solid var(--gold); box-shadow: 0 0 25px rgba(201,168,76,0.25); }
+  .gaming-list li::before {
+    content: ''; width: 6px; height: 6px; border-radius: 50%;
+    background: var(--gold); flex-shrink: 0;
+  }
+  .gaming-badge {
+    display: inline-block; padding: 0.4rem 1rem;
+    border: 1px solid var(--gold); color: var(--gold);
+    font-size: 0.55rem; letter-spacing: 0.3em; text-transform: uppercase;
+    margin-top: 2rem;
+  }
+  .gaming-visual {
+    position: relative; display: flex; align-items: center; justify-content: center;
+  }
+  .gaming-hex {
+    width: 280px; height: 280px;
+    background: radial-gradient(circle at center, rgba(201,168,76,0.12), transparent 70%);
+    border: 1px solid rgba(201,168,76,0.2);
+    border-radius: 50%; display: flex; align-items: center; justify-content: center;
+    position: relative;
+  }
+  .gaming-hex::before {
+    content: ''; position: absolute; inset: 20px;
+    border: 1px solid rgba(201,168,76,0.1); border-radius: 50%;
+  }
+  .gaming-icon-big { font-size: 5rem; line-height: 1; }
+
+  /* GAMING GALLERY */
+  .gaming-gallery {
+    display: grid; grid-template-columns: repeat(5, 1fr); gap: 6px;
+    margin-top: 2rem;
+  }
+  .gaming-gallery img {
+    width: 100%; aspect-ratio: 1/1; object-fit: cover;
+    border-radius: 4px; filter: grayscale(15%) brightness(0.85);
+    transition: filter 0.35s, transform 0.35s;
+    border: 1px solid rgba(201,168,76,0.2);
+  }
+  .gaming-gallery img:hover {
+    filter: grayscale(0%) brightness(1); transform: scale(1.04);
+  }
 
   /* TESTIMONIAL */
   .testimonial { background: var(--dark); text-align: center; }
-  .testimonial blockquote { font-family: 'Cormorant Garamond', serif; font-size: clamp(1.3rem, 3vw, 2rem); font-style: italic; font-weight: 300; color: var(--cream); line-height: 1.6; max-width: 780px; margin: 0 auto; position: relative; padding: 2rem 0; }
-  .testimonial blockquote::before { content: '\201C'; font-size: 8rem; color: var(--gold); opacity: 0.2; position: absolute; top: -2rem; left: -1rem; font-style: normal; line-height: 1; }
-  .testimonial cite { display: block; margin-top: 2rem; font-family: 'Montserrat', sans-serif; font-size: 0.65rem; letter-spacing: 0.25em; text-transform: uppercase; color: var(--gold); font-style: normal; }
+  .testimonial blockquote {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(1.3rem, 3vw, 2rem); font-style: italic;
+    font-weight: 300; color: var(--cream); line-height: 1.6;
+    max-width: 780px; margin: 0 auto; position: relative; padding: 2rem 0;
+  }
+  .testimonial blockquote::before {
+    content: '\201C'; font-size: 8rem; color: var(--gold); opacity: 0.2;
+    position: absolute; top: -2rem; left: -1rem; font-style: normal; line-height: 1;
+  }
+  .testimonial cite {
+    display: block; margin-top: 2rem;
+    font-family: 'Montserrat', sans-serif; font-size: 0.65rem;
+    letter-spacing: 0.25em; text-transform: uppercase; color: var(--gold);
+    font-style: normal;
+  }
 
-  /* CONTACT & FORM */
+  /* CONTACT */
   .contact { background: var(--black); }
   .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; }
-  .contact-info p { font-size: 0.85rem; line-height: 1.9; color: rgba(245,240,232,0.65); font-weight: 300; margin-bottom: 2rem; }
-  .contact-detail { display: flex; align-items: flex-start; gap: 1rem; margin-bottom: 1.2rem; }
+  .contact-info p {
+    font-size: 0.85rem; line-height: 1.9; color: rgba(245,240,232,0.65);
+    font-weight: 300; margin-bottom: 2rem;
+  }
+  .contact-detail {
+    display: flex; align-items: flex-start; gap: 1rem; margin-bottom: 1.2rem;
+  }
   .contact-detail-icon { font-size: 1rem; color: var(--gold); flex-shrink: 0; margin-top: 2px; }
-  .contact-detail-text { font-size: 0.78rem; line-height: 1.6; color: var(--cream); font-weight: 300; }
-  .contact-detail-label { font-size: 0.55rem; letter-spacing: 0.25em; text-transform: uppercase; color: var(--gold); display: block; margin-bottom: 0.2rem; }
+  .contact-detail-text {
+    font-size: 0.78rem; line-height: 1.6; color: var(--cream); font-weight: 300;
+  }
+  .contact-detail-label {
+    font-size: 0.55rem; letter-spacing: 0.25em; text-transform: uppercase;
+    color: var(--gold); display: block; margin-bottom: 0.2rem;
+  }
   .contact-form { display: flex; flex-direction: column; gap: 1.2rem; }
   .form-group { display: flex; flex-direction: column; gap: 0.4rem; }
-  .form-label { font-size: 0.6rem; letter-spacing: 0.25em; text-transform: uppercase; color: var(--gold); }
-  .form-input, .form-textarea { background: var(--dark); border: 1px solid rgba(201,168,76,0.2); color: var(--cream); padding: 0.9rem 1.1rem; font-family: 'Montserrat', sans-serif; font-size: 0.8rem; font-weight: 300; outline: none; transition: border-color 0.3s; width: 100%; }
+  .form-label {
+    font-size: 0.6rem; letter-spacing: 0.25em; text-transform: uppercase; color: var(--gold);
+  }
+  .form-input, .form-textarea {
+    background: var(--dark); border: 1px solid rgba(201,168,76,0.2);
+    color: var(--cream); padding: 0.9rem 1.1rem;
+    font-family: 'Montserrat', sans-serif; font-size: 0.8rem; font-weight: 300;
+    outline: none; transition: border-color 0.3s; width: 100%;
+  }
   .form-input:focus, .form-textarea:focus { border-color: var(--gold); }
   .form-textarea { height: 120px; resize: vertical; }
   ::placeholder { color: rgba(245,240,232,0.2); }
 
   /* FOOTER */
-  footer { background: var(--dark); padding: 3rem 2rem; border-top: 1px solid rgba(201,168,76,0.15); }
-  .footer-inner { max-width: 1100px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1.5rem; }
-  .footer-logo { font-family: 'Cormorant Garamond', serif; font-size: 1.1rem; color: var(--gold); letter-spacing: 0.2em; text-transform: uppercase; }
-  .footer-copy { font-size: 0.6rem; letter-spacing: 0.15em; color: var(--text-muted); text-align: center; }
-  .footer-tagline { font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 0.85rem; color: rgba(201,168,76,0.5); }
-  .gold-rule { width: 100%; height: 1px; background: linear-gradient(to right, transparent, var(--gold), transparent); opacity: 0.3; }
+  footer {
+    background: var(--dark); padding: 3rem 2rem;
+    border-top: 1px solid rgba(201,168,76,0.15);
+  }
+  .footer-inner {
+    max-width: 1100px; margin: 0 auto;
+    display: flex; align-items: center; justify-content: space-between; flex-wrap: gap;
+    gap: 1.5rem;
+  }
+  .footer-logo {
+    font-family: 'Cormorant Garamond', serif; font-size: 1.1rem;
+    color: var(--gold); letter-spacing: 0.2em; text-transform: uppercase;
+  }
+  .footer-copy {
+    font-size: 0.6rem; letter-spacing: 0.15em;
+    color: var(--text-muted); text-align: center;
+  }
+  .footer-tagline {
+    font-family: 'Cormorant Garamond', serif; font-style: italic;
+    font-size: 0.85rem; color: rgba(201,168,76,0.5);
+  }
 
-  @keyframes fadeUp { from { opacity: 0; transform: translateY(28px); } to { opacity: 1; transform: translateY(0); } }
-  @keyframes fadeDown { from { opacity: 0; transform: translateY(-20px); } to { opacity: 1; transform: translateY(0); } }
-  @keyframes marquee { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+  /* GOLD RULE */
+  .gold-rule {
+    width: 100%; height: 1px;
+    background: linear-gradient(to right, transparent, var(--gold), transparent);
+    opacity: 0.3;
+  }
 
-  .reveal { opacity: 0; transform: translateY(30px); transition: opacity 0.8s ease, transform 0.8s ease; }
+  /* ANIMATIONS */
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(28px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+  @keyframes fadeDown {
+    from { opacity: 0; transform: translateY(-20px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+  @keyframes marquee {
+    from { transform: translateX(0); }
+    to   { transform: translateX(-50%); }
+  }
+
+  /* REVEAL ON SCROLL */
+  .reveal {
+    opacity: 0; transform: translateY(30px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+  }
   .reveal.visible { opacity: 1; transform: translateY(0); }
 
+  /* RESPONSIVE */
   @media (max-width: 768px) {
     nav { padding: 1.2rem 1.5rem; }
     .nav-links { display: none; }
     .about-grid, .gaming-inner, .contact-grid { grid-template-columns: 1fr; gap: 3rem; }
     .about-stats { grid-template-columns: 1fr 1fr; }
     section { padding: 5rem 1.5rem; }
+    .gaming-visual { display: none; }
   }
 </style>
 </head>
 <body>
 
+<!-- NAV -->
 <nav>
   <div class="nav-logo">
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" width="44" height="44" style="flex-shrink:0;">
-      <circle cx="250" cy="250" r="240" fill="#0a0a0a" stroke="#c9a84c" stroke-width="2"/>
-      <text x="250" y="270" font-family="'Cormorant Garamond', serif" font-size="140" fill="#c9a84c" font-weight="600" text-anchor="middle">TL</text>
-    </svg>
+  <defs>
+    <radialGradient id="nb" cx="50%" cy="40%" r="55%"><stop offset="0%" stop-color="#1a1507"/><stop offset="100%" stop-color="#0a0a0a"/></radialGradient>
+    <linearGradient id="ng" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#e8d5a3"/><stop offset="40%" stop-color="#c9a84c"/><stop offset="100%" stop-color="#8a6820"/></linearGradient>
+    <radialGradient id="ngl" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="#c9a84c" stop-opacity="0.18"/><stop offset="100%" stop-color="#c9a84c" stop-opacity="0"/></radialGradient>
+    <filter id="nf"><feGaussianBlur stdDeviation="3" result="blur"/><feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  </defs>
+  <circle cx="250" cy="250" r="250" fill="url(#nb)"/>
+  <ellipse cx="250" cy="220" rx="160" ry="130" fill="url(#ngl)"/>
+  <circle cx="250" cy="250" r="228" fill="none" stroke="url(#ng)" stroke-width="0.8" opacity="0.5"/>
+  <polygon points="250,30 255,38 250,46 245,38" fill="url(#ng)" opacity="0.8"/>
+  <polygon points="250,454 255,462 250,470 245,462" fill="url(#ng)" opacity="0.8"/>
+  <polygon points="30,250 38,255 46,250 38,245" fill="url(#ng)" opacity="0.8"/>
+  <polygon points="454,250 462,255 470,250 462,245" fill="url(#ng)" opacity="0.8"/>
+  <rect x="170" y="270" width="160" height="14" rx="7" fill="url(#ng)" opacity="0.9"/>
+  <rect x="178" y="284" width="8" height="22" rx="4" fill="url(#ng)" opacity="0.7"/>
+  <rect x="314" y="284" width="8" height="22" rx="4" fill="url(#ng)" opacity="0.7"/>
+  <rect x="175" y="248" width="150" height="26" rx="8" fill="url(#ng)" opacity="0.85"/>
+  <rect x="182" y="192" width="136" height="60" rx="10" fill="url(#ng)" opacity="0.9"/>
+  <rect x="190" y="196" width="120" height="6" rx="3" fill="#e8d5a3" opacity="0.3"/>
+  <rect x="163" y="230" width="22" height="44" rx="9" fill="url(#ng)" opacity="0.85"/>
+  <rect x="315" y="230" width="22" height="44" rx="9" fill="url(#ng)" opacity="0.85"/>
+  <rect x="196" y="202" width="108" height="44" rx="6" fill="#0a0a0a" opacity="0.55"/>
+  <text x="250" y="232" font-family="Palatino,Georgia,serif" font-size="28" font-weight="400" font-style="italic" fill="url(#ng)" text-anchor="middle" dominant-baseline="middle" filter="url(#nf)" opacity="0.95">TL</text>
+  <g opacity="0.55"><line x1="160" y1="168" x2="340" y2="168" stroke="url(#ng)" stroke-width="0.7"/></g>
+  <polygon points="148,248 153,252 148,256 143,252" fill="url(#ng)" opacity="0.6"/>
+  <polygon points="352,248 357,252 352,256 347,252" fill="url(#ng)" opacity="0.6"/>
+</svg>
     The Therapist Lobby
   </div>
   <ul class="nav-links">
@@ -259,10 +529,49 @@
   </ul>
 </nav>
 
+<!-- HERO -->
 <section class="hero" id="home">
   <div class="hero-bg"></div>
   <div style="position:relative;z-index:1;width:100%;">
     <div class="hero-line"></div>
+    <div class="hero-logo-wrap show" id="heroLogoWrap">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" width="160" height="160" style="filter:drop-shadow(0 0 24px rgba(201,168,76,0.4));">
+  <defs>
+    <radialGradient id="hb" cx="50%" cy="40%" r="55%"><stop offset="0%" stop-color="#1a1507"/><stop offset="100%" stop-color="#0a0a0a"/></radialGradient>
+    <linearGradient id="hg" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#e8d5a3"/><stop offset="40%" stop-color="#c9a84c"/><stop offset="100%" stop-color="#8a6820"/></linearGradient>
+    <radialGradient id="hgl" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="#c9a84c" stop-opacity="0.18"/><stop offset="100%" stop-color="#c9a84c" stop-opacity="0"/></radialGradient>
+    <filter id="hf"><feGaussianBlur stdDeviation="3" result="blur"/><feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  </defs>
+  <circle cx="250" cy="250" r="250" fill="url(#hb)"/>
+  <ellipse cx="250" cy="220" rx="160" ry="130" fill="url(#hgl)"/>
+  <circle cx="250" cy="250" r="228" fill="none" stroke="url(#hg)" stroke-width="0.8" opacity="0.5"/>
+  <circle cx="250" cy="250" r="220" fill="none" stroke="url(#hg)" stroke-width="0.4" opacity="0.3"/>
+  <polygon points="250,30 255,38 250,46 245,38" fill="url(#hg)" opacity="0.8"/>
+  <polygon points="250,454 255,462 250,470 245,462" fill="url(#hg)" opacity="0.8"/>
+  <polygon points="30,250 38,255 46,250 38,245" fill="url(#hg)" opacity="0.8"/>
+  <polygon points="454,250 462,255 470,250 462,245" fill="url(#hg)" opacity="0.8"/>
+  <line x1="80" y1="250" x2="170" y2="250" stroke="url(#hg)" stroke-width="0.6" opacity="0.4"/>
+  <line x1="330" y1="250" x2="420" y2="250" stroke="url(#hg)" stroke-width="0.6" opacity="0.4"/>
+  <rect x="170" y="270" width="160" height="14" rx="7" fill="url(#hg)" opacity="0.9"/>
+  <rect x="178" y="284" width="8" height="22" rx="4" fill="url(#hg)" opacity="0.7"/>
+  <rect x="314" y="284" width="8" height="22" rx="4" fill="url(#hg)" opacity="0.7"/>
+  <rect x="175" y="248" width="150" height="26" rx="8" fill="url(#hg)" opacity="0.85"/>
+  <rect x="182" y="192" width="136" height="60" rx="10" fill="url(#hg)" opacity="0.9"/>
+  <rect x="190" y="196" width="120" height="6" rx="3" fill="#e8d5a3" opacity="0.3"/>
+  <rect x="163" y="230" width="22" height="44" rx="9" fill="url(#hg)" opacity="0.85"/>
+  <rect x="315" y="230" width="22" height="44" rx="9" fill="url(#hg)" opacity="0.85"/>
+  <rect x="196" y="202" width="108" height="44" rx="6" fill="#0a0a0a" opacity="0.55"/>
+  <text x="250" y="232" font-family="Palatino,Georgia,serif" font-size="28" font-weight="400" font-style="italic" fill="url(#hg)" text-anchor="middle" dominant-baseline="middle" filter="url(#hf)" opacity="0.95">TL</text>
+  <g opacity="0.55"><line x1="160" y1="168" x2="340" y2="168" stroke="url(#hg)" stroke-width="0.7"/><line x1="175" y1="172" x2="325" y2="172" stroke="url(#hg)" stroke-width="0.4"/></g>
+  <polygon points="148,248 153,252 148,256 143,252" fill="url(#hg)" opacity="0.6"/>
+  <polygon points="352,248 357,252 352,256 347,252" fill="url(#hg)" opacity="0.6"/>
+  <text x="250" y="342" font-family="Palatino,Georgia,serif" font-size="19" font-weight="600" letter-spacing="6" fill="url(#hg)" text-anchor="middle" dominant-baseline="middle" filter="url(#hf)">THE THERAPIST</text>
+  <line x1="148" y1="356" x2="352" y2="356" stroke="url(#hg)" stroke-width="0.6" opacity="0.5"/>
+  <text x="250" y="374" font-family="Palatino,Georgia,serif" font-size="13" font-weight="300" letter-spacing="12" fill="url(#hg)" text-anchor="middle" dominant-baseline="middle" opacity="0.8">LOBBY</text>
+  <text x="250" y="400" font-family="Palatino,Georgia,serif" font-size="8.5" font-style="italic" letter-spacing="2.5" fill="#c9a84c" text-anchor="middle" dominant-baseline="middle" opacity="0.6">Your One Click For Everything</text>
+  <g opacity="0.45"><line x1="175" y1="418" x2="325" y2="418" stroke="url(#hg)" stroke-width="0.7"/><polygon points="250,424 253,429 250,434 247,429" fill="url(#hg)"/></g>
+</svg>
+    </div>
     <p class="hero-eyebrow">Premium Business & Creative Services</p>
     <h1 class="hero-title">The <em>Therapist</em><br>Lobby</h1>
     <p class="hero-subtitle">Your One-Click Solution — Where Every Need Finds Its Answer</p>
@@ -273,8 +582,13 @@
   </div>
 </section>
 
+<!-- MARQUEE -->
 <div class="marquee-wrap">
   <div class="marquee-track">
+    <span>Graphic Design</span><span>Flight Booking</span><span>NIN Services</span>
+    <span>Real Estate</span><span>Company Profiles</span><span>Typesetting</span>
+    <span>Video Editing</span><span>Legal Documents</span><span>Gaming Services</span>
+    <span>Web Design</span><span>Transcription</span><span>Photo Editing</span>
     <span>Graphic Design</span><span>Flight Booking</span><span>NIN Services</span>
     <span>Real Estate</span><span>Company Profiles</span><span>Typesetting</span>
     <span>Video Editing</span><span>Legal Documents</span><span>Gaming Services</span>
@@ -282,6 +596,7 @@
   </div>
 </div>
 
+<!-- ABOUT -->
 <section class="about" id="about">
   <div class="container">
     <div class="about-grid reveal">
@@ -291,19 +606,32 @@
         <div class="divider left"></div>
         <div class="about-body">
           <p>The Therapist Lobby is a premium multi-service hub built for individuals and businesses who demand quality, speed, and reliability — all in one place. We are your single point of contact for design, documentation, travel, property, and digital services.</p>
-          <p>Whether you're launching a brand, booking a flight, legalizing a document, or levelling up your gaming profile — we handle it all with precision and professionalism.</p>
+          <p>Whether you're launching a brand, booking a flight, legalizing a document, or levelling up your gaming profile — we handle it all with precision and professionalism. No runaround. No middlemen. Just results.</p>
         </div>
       </div>
       <div class="about-stats">
-        <div class="stat-box"><div class="stat-num">15+</div><div class="stat-label">Categories</div></div>
-        <div class="stat-box"><div class="stat-num">100%</div><div class="stat-label">Focused</div></div>
-        <div class="stat-box"><div class="stat-num">24/7</div><div class="stat-label">Available</div></div>
-        <div class="stat-box"><div class="stat-num">1</div><div class="stat-label">Click Away</div></div>
+        <div class="stat-box">
+          <div class="stat-num">15+</div>
+          <div class="stat-label">Service Categories</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-num">100%</div>
+          <div class="stat-label">Client Focused</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-num">24/7</div>
+          <div class="stat-label">Availability</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-num">1</div>
+          <div class="stat-label">Click Away</div>
+        </div>
       </div>
     </div>
   </div>
 </section>
 
+<!-- SERVICES -->
 <section class="services" id="services">
   <div class="container">
     <div class="services-intro reveal">
@@ -314,32 +642,128 @@
     <div class="services-grid reveal">
 
       <div class="service-card">
-        <img class="service-img" src="https://images.unsplash.com/photo-1626785774573-4b799315345d?q=80&w=500&auto=format&fit=crop" alt="Graphic Design">
-        <div class="service-content">
-          <span class="service-icon">🎨</span>
-          <h3 class="service-title">Graphic Design</h3>
-          <p class="service-desc">Professional logos, banners, flyers, stickers, and branded materials crafted to make your business stand out.</p>
-          <span class="service-tag">Logos · Banners · Flyers</span>
+        <span class="service-icon">🎨</span>
+        <h3 class="service-title">Graphic Design</h3>
+        <p class="service-desc">Professional logos, banners, flyers, stickers, and branded materials crafted to make your business stand out. Full-service visual identity creation.</p>
+        <span class="service-tag">Logos · Banners · Flyers · Stickers</span>
+        <div class="service-gallery">
+          <img src="https://images.unsplash.com/photo-1626785774573-4b799315345d?auto=format&fit=crop&w=300&h=300&q=80" alt="Graphic design workspace" loading="lazy"/>
+          <img src="https://images.unsplash.com/photo-1561070791-2526d30994b5?auto=format&fit=crop&w=300&h=300&q=80" alt="Color palette book" loading="lazy"/>
+          <img src="https://images.unsplash.com/photo-1572044162444-ad60f128bdea?auto=format&fit=crop&w=300&h=300&q=80" alt="Designer laptop" loading="lazy"/>
+          <img src="https://images.unsplash.com/photo-1587440871875-191322ee64b0?auto=format&fit=crop&w=300&h=300&q=80" alt="Design sketching" loading="lazy"/>
+          <img src="https://images.unsplash.com/photo-1613909207039-6b173b755cc1?auto=format&fit=crop&w=300&h=300&q=80" alt="Designer at computer" loading="lazy"/>
         </div>
       </div>
 
       <div class="service-card">
-        <img class="service-img" src="https://images.unsplash.com/photo-1547658719-da2b81166b58?q=80&w=500&auto=format&fit=crop" alt="Web Design">
-        <div class="service-content">
-          <span class="service-icon">🌐</span>
-          <h3 class="service-title">Web & Digital Design</h3>
-          <p class="service-desc">Web design editing, digital asset creation, and frontend configurations tailored for your online presence.</p>
-          <span class="service-tag">Web Design · Digital Assets</span>
+        <span class="service-icon">🌐</span>
+        <h3 class="service-title">Web & Digital Design</h3>
+        <p class="service-desc">Web design editing, digital asset creation, and visual content tailored for your online presence.</p>
+        <span class="service-tag">Web Design · Digital Assets</span>
+        <div class="service-gallery">
+          <img src="https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?auto=format&fit=crop&w=300&h=300&q=80" alt="Web design monitor" loading="lazy"/>
+          <img src="https://images.unsplash.com/photo-1547658719-da2b51169166?auto=format&fit=crop&w=300&h=300&q=80" alt="Digital product display" loading="lazy"/>
+          <img src="https://images.unsplash.com/photo-1499951360447-b19be8fe80f5?auto=format&fit=crop&w=300&h=300&q=80" alt="MacBook and iMac setup" loading="lazy"/>
+          <img src="https://images.unsplash.com/photo-1542744094-3a31f272c490?auto=format&fit=crop&w=300&h=300&q=80" alt="Person on Apple computer" loading="lazy"/>
+          <img src="https://images.unsplash.com/photo-1487338875411-8880f74114a2?auto=format&fit=crop&w=300&h=300&q=80" alt="Dual monitor setup" loading="lazy"/>
         </div>
       </div>
 
       <div class="service-card">
-        <img class="service-img" src="https://images.unsplash.com/photo-1450133064473-71024230f91b?q=80&w=500&auto=format&fit=crop" alt="Documentation">
-        <div class="service-content">
-          <span class="service-icon">📋</span>
-          <h3 class="service-title">Business Documentation</h3>
-          <p class="service-desc">Comprehensive company profiles, agreements, deeds, and formal business documentation prepared perfectly.</p>
-          <span class="service-tag">Profiles · Agreements</span>
+        <span class="service-icon">📋</span>
+        <h3 class="service-title">Business Documentation</h3>
+        <p class="service-desc">Comprehensive company profiles, agreements, deeds, and all formal business documentation prepared to professional standards.</p>
+        <span class="service-tag">Profiles · Agreements · Deeds</span>
+        <div class="service-gallery">
+          <img src="https://images.unsplash.com/photo-1444653614773-995cb1ef9efa?auto=format&fit=crop&w=300&h=300&q=80" alt="Business documentation" loading="lazy"/>
+          <img src="https://images.unsplash.com/photo-1603796846097-bee99e4a601f?auto=format&fit=crop&w=300&h=300&q=80" alt="Person signing paper" loading="lazy"/>
+          <img src="https://images.unsplash.com/photo-1681505531034-8d67054e07f6?auto=format&fit=crop&w=300&h=300&q=80" alt="Handshake over paperwork" loading="lazy"/>
+          <img src="https://images.unsplash.com/photo-1562564055-71e051d33c19?auto=format&fit=crop&w=300&h=300&q=80" alt="Signing business documents" loading="lazy"/>
+          <img src="https://images.unsplash.com/photo-1521791055366-0d553872125f?auto=format&fit=crop&w=300&h=300&q=80" alt="Writing on paper" loading="lazy"/>
+        </div>
+      </div>
+
+      <div class="service-card">
+        <span class="service-icon">✈️</span>
+        <h3 class="service-title">Flight Booking</h3>
+        <p class="service-desc">Seamless booking of local and international flights. We handle the search, comparison, and reservation so you simply pack and travel.</p>
+        <span class="service-tag">Local · International Flights</span>
+        <div class="service-gallery">
+          <img src="https://images.unsplash.com/photo-1500835556837-99ac94a94552?auto=format&fit=crop&w=300&h=300&q=80" alt="Airplane at golden hour" loading="lazy"/>
+          <img src="https://images.unsplash.com/photo-1436491865332-7a61a109cc05?auto=format&fit=crop&w=300&h=300&q=80" alt="Aerial view of airliner" loading="lazy"/>
+          <img src="https://images.unsplash.com/photo-1488085061387-422e29b40080?auto=format&fit=crop&w=300&h=300&q=80" alt="Airplane window view" loading="lazy"/>
+          <img src="https://images.unsplash.com/photo-1504150558240-0b4fd8946624?auto=format&fit=crop&w=300&h=300&q=80" alt="Traveler at airport" loading="lazy"/>
+          <img src="https://images.unsplash.com/photo-1606768666853-403c90a981ad?auto=format&fit=crop&w=300&h=300&q=80" alt="Airplane flying in sky" loading="lazy"/>
+        </div>
+      </div>
+
+      <div class="service-card">
+        <span class="service-icon">🪪</span>
+        <h3 class="service-title">NIN Services</h3>
+        <p class="service-desc">Official NIN validation and reprinting of lost National Identification Numbers. Quick, reliable, and properly handled.</p>
+        <span class="service-tag">Validation · Reprinting</span>
+        <div class="service-gallery">
+          <img src="https://images.unsplash.com/photo-1454496406107-dc34337da8d6?auto=format&fit=crop&w=300&h=300&q=80" alt="ID booklet on paper" loading="lazy"/>
+          <img src="https://images.unsplash.com/photo-1553697388-94e804e2f0f6?auto=format&fit=crop&w=300&h=300&q=80" alt="Person holding ID documents" loading="lazy"/>
+          <img src="https://images.unsplash.com/photo-1581553672347-95d9444c0d2c?auto=format&fit=crop&w=300&h=300&q=80" alt="Identification card" loading="lazy"/>
+          <img src="https://images.unsplash.com/photo-1487637419635-a2a471ff5c7b?auto=format&fit=crop&w=300&h=300&q=80" alt="ID document book" loading="lazy"/>
+          <img src="https://images.unsplash.com/photo-1532995092664-7027dcede29f?auto=format&fit=crop&w=300&h=300&q=80" alt="Identification documents" loading="lazy"/>
+        </div>
+      </div>
+
+      <div class="service-card">
+        <span class="service-icon">🏠</span>
+        <h3 class="service-title">Real Estate & Assets</h3>
+        <p class="service-desc">Facilitation of buying and selling of land, houses, and vehicles. We connect buyers and sellers with clarity and confidence.</p>
+        <span class="service-tag">Land · Houses · Cars</span>
+        <div class="service-gallery">
+          <img src="https://images.unsplash.com/photo-1582407947304-fd86f028f716?auto=format&fit=crop&w=300&h=300&q=80" alt="High rise building" loading="lazy"/>
+          <img src="https://images.unsplash.com/photo-1580587771525-78b9dba3b914?auto=format&fit=crop&w=300&h=300&q=80" alt="Modern property exterior" loading="lazy"/>
+          <img src="https://images.unsplash.com/photo-1605146769289-440113cc3d00?auto=format&fit=crop&w=300&h=300&q=80" alt="Concrete house" loading="lazy"/>
+          <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&w=300&h=300&q=80" alt="House miniature model" loading="lazy"/>
+          <img src="https://images.unsplash.com/photo-1592595896551-12b371d546d5?auto=format&fit=crop&w=300&h=300&q=80" alt="House with green grass" loading="lazy"/>
+        </div>
+      </div>
+
+      <div class="service-card">
+        <span class="service-icon">📝</span>
+        <h3 class="service-title">Typesetting & Transcription</h3>
+        <p class="service-desc">Professional typesetting, proofreading, transcription, and project work. Clean documents, polished copy, and accurate formatting every time.</p>
+        <span class="service-tag">Typesetting · Proofreading · Transcription</span>
+        <div class="service-gallery">
+          <img src="https://images.unsplash.com/photo-1505682634904-d7c8d95cdc50?auto=format&fit=crop&w=300&h=300&q=80" alt="Vintage typewriter" loading="lazy"/>
+          <img src="https://images.unsplash.com/photo-1510442650500-93217e634e4c?auto=format&fit=crop&w=300&h=300&q=80" alt="Person typing on typewriter" loading="lazy"/>
+          <img src="https://images.unsplash.com/photo-1530819568329-97653eafbbfa?auto=format&fit=crop&w=300&h=300&q=80" alt="Black typewriter" loading="lazy"/>
+          <img src="https://images.unsplash.com/photo-1586943759341-be5595944989?auto=format&fit=crop&w=300&h=300&q=80" alt="Typewriter on green table" loading="lazy"/>
+          <img src="https://images.unsplash.com/photo-1524668951403-d44b28200ce0?auto=format&fit=crop&w=300&h=300&q=80" alt="Brown typewriter" loading="lazy"/>
+        </div>
+      </div>
+
+      <div class="service-card">
+        <span class="service-icon">📍</span>
+        <h3 class="service-title">Google Business Registration</h3>
+        <p class="service-desc">Get your business found on Google. We handle your Google Business Profile registration and setup for maximum local visibility.</p>
+        <span class="service-tag">Google Profile · Local SEO</span>
+        <div class="service-gallery">
+          <img src="https://images.unsplash.com/photo-1548345680-f5475ea5df84?auto=format&fit=crop&w=300&h=300&q=80" alt="Person holding smartphone with maps" loading="lazy"/>
+          <img src="https://images.unsplash.com/photo-1569336415962-a4bd9f69cd83?auto=format&fit=crop&w=300&h=300&q=80" alt="Road map" loading="lazy"/>
+          <img src="https://images.unsplash.com/photo-1694928850410-b209896782a2?auto=format&fit=crop&w=300&h=300&q=80" alt="Map pin location marker" loading="lazy"/>
+          <img src="https://images.unsplash.com/photo-1584972191378-d70853fc47fc?auto=format&fit=crop&w=300&h=300&q=80" alt="Colorful map" loading="lazy"/>
+          <img src="https://images.unsplash.com/photo-1599202889720-cd3c0833efa1?auto=format&fit=crop&w=300&h=300&q=80" alt="Person with phone navigation" loading="lazy"/>
+        </div>
+      </div>
+
+      <div class="service-card">
+        <span class="service-icon">🎬</span>
+        <h3 class="service-title">Photo & Video Editing</h3>
+        <p class="service-desc">Creative photo editing, face swap composites, client video editing, and visual content production at a professional level.</p>
+        <span class="service-tag">Photos · Videos · Compositing</span>
+        <div class="service-gallery">
+          <img src="https://images.unsplash.com/photo-1485846234645-a62644f84728?auto=format&fit=crop&w=300&h=300&q=80" alt="Film clap board" loading="lazy"/>
+          <img src="https://images.unsplash.com/photo-1528109966604-5a6a4a964e8d?auto=format&fit=crop&w=300&h=300&q=80" alt="Video editor on laptop" loading="lazy"/>
+          <img src="https://images.unsplash.com/photo-1625690303837-654c9666d2d0?auto=format&fit=crop&w=300&h=300&q=80" alt="Camera tripod setup" loading="lazy"/>
+          <img src="https://images.unsplash.com/photo-1612548403247-aa2873e9422d?auto=format&fit=crop&w=300&h=300&q=80" alt="DSLR camera" loading="lazy"/>
+          <img src="https://images.unsplash.com/photo-1553166272-e69910ab5ae1?auto=format&fit=crop&w=300&h=300&q=80" alt="Video camera" loading="lazy"/>
         </div>
       </div>
 
@@ -347,6 +771,7 @@
   </div>
 </section>
 
+<!-- GAMING -->
 <section class="gaming" id="gaming">
   <div class="container">
     <div class="gaming-inner reveal">
@@ -354,7 +779,7 @@
         <span class="section-label">For Gamers</span>
         <h2 class="section-title">Call of Duty <em>Services</em></h2>
         <div class="divider left"></div>
-        <p class="gaming-body">We cater to the gaming community with a full suite of Call of Duty account services. High speeds and secure delivery.</p>
+        <p class="gaming-body">We cater to the gaming community with a full suite of Call of Duty account services. Whether you need a fresh account, CP, a Battle Pass, or a fully grinded camo — we deliver with speed and integrity.</p>
         <ul class="gaming-list">
           <li>Buying & Selling of Call of Duty Accounts</li>
           <li>CP (CoD Points) Supply</li>
@@ -362,14 +787,36 @@
           <li>Camo Grinding & Unlocks</li>
         </ul>
         <span class="gaming-badge">Level Up with The Therapist</span>
+        <div class="gaming-gallery">
+          <img src="https://images.unsplash.com/photo-1612287230202-1ff1d85d1bdf?auto=format&fit=crop&w=300&h=300&q=80" alt="Xbox controller" loading="lazy"/>
+          <img src="https://images.unsplash.com/photo-1509198397868-475647b2a1e5?auto=format&fit=crop&w=300&h=300&q=80" alt="PS4 DualShock controller" loading="lazy"/>
+          <img src="https://images.unsplash.com/photo-1586182987320-4f376d39d787?auto=format&fit=crop&w=300&h=300&q=80" alt="Person holding game controller" loading="lazy"/>
+          <img src="https://images.unsplash.com/photo-1552820728-8b83bb6b773f?auto=format&fit=crop&w=300&h=300&q=80" alt="DualShock 4 controller" loading="lazy"/>
+          <img src="https://images.unsplash.com/photo-1572537577590-ac6a88150100?auto=format&fit=crop&w=300&h=300&q=80" alt="Collection of game controllers" loading="lazy"/>
+        </div>
       </div>
       <div class="gaming-visual">
-        <img class="gaming-img-card" src="https://images.unsplash.com/photo-1552820728-8b83bb6b773f?q=80&w=600&auto=format&fit=crop" alt="CODM Gaming Setup">
+        <div class="gaming-hex">
+          <span class="gaming-icon-big">🎮</span>
+        </div>
       </div>
     </div>
   </div>
 </section>
 
+<!-- TESTIMONIAL -->
+<section class="testimonial">
+  <div class="container reveal">
+    <div class="divider"></div>
+    <blockquote>
+      "The Therapist Lobby handled our company profile, booked our flights, and designed our branding — all at once. Effortless, professional, and truly a one-stop solution."
+      <cite>— A Satisfied Client</cite>
+    </blockquote>
+    <div class="divider" style="margin-top:2rem;"></div>
+  </div>
+</section>
+
+<!-- CONTACT -->
 <section class="contact" id="contact">
   <div class="container">
     <div class="contact-grid reveal">
@@ -377,13 +824,35 @@
         <span class="section-label">Reach Us</span>
         <h2 class="section-title">Let's <em>Work</em><br>Together</h2>
         <div class="divider left"></div>
-        <p>Ready to get started? Reach out and we'll handle the rest.</p>
-        <div class="contact-detail"><span class="contact-detail-icon">📱</span><div class="contact-detail-text"><span class="contact-detail-label">Phone / WhatsApp</span>+2349074041752</div></div>
-        <div class="contact-detail"><span class="contact-detail-icon">✉️</span><div class="contact-detail-text"><span class="contact-detail-label">Email</span>thetherapistlobby@gmail.com</div></div>
+        <p>Ready to get started? Whether you need a logo, a flight ticket, a legal document, or a game account — reach out and we'll handle the rest.</p>
+
+        <div class="contact-detail">
+          <span class="contact-detail-icon">📱</span>
+          <div class="contact-detail-text">
+            <span class="contact-detail-label">Phone / WhatsApp</span>
+            Your Number Here
+          </div>
+        </div>
+        <div class="contact-detail">
+          <span class="contact-detail-icon">✉️</span>
+          <div class="contact-detail-text">
+            <span class="contact-detail-label">Email</span>
+            youremail@example.com
+          </div>
+        </div>
+        <div class="contact-detail">
+          <span class="contact-detail-icon">📍</span>
+          <div class="contact-detail-text">
+            <span class="contact-detail-label">Location</span>
+            Your City, Country
+          </div>
+        </div>
       </div>
 
       <div>
-        <form action="https://formspree.io/f/your-form-id" method="POST" class="contact-form">
+        <form class="contact-form" id="contactForm" action="https://formspree.io/f/xdayqapp" method="POST">
+          <input type="hidden" name="_replyto" value="thetherapistlobby@gmail.com" />
+          <input type="hidden" name="_subject" value="New Enquiry — The Therapist Lobby" />
           <div class="form-group">
             <label class="form-label">Full Name</label>
             <input type="text" name="name" class="form-input" placeholder="Your name" required />
@@ -393,30 +862,115 @@
             <input type="email" name="email" class="form-input" placeholder="your@email.com" required />
           </div>
           <div class="form-group">
-            <label class="form-label">Message</label>
-            <textarea name="message" class="form-textarea" placeholder="Tell us about your project..." required></textarea>
+            <label class="form-label">Phone / WhatsApp</label>
+            <input type="text" name="phone" class="form-input" placeholder="Your phone number" />
           </div>
-          <button type="submit" class="btn-gold" style="width:100%;padding:1rem;">Send Message</button>
+          <div class="form-group">
+            <label class="form-label">Service Needed</label>
+            <input type="text" name="service" class="form-input" placeholder="e.g. Logo Design, Flight Booking..." required />
+          </div>
+          <div class="form-group">
+            <label class="form-label">Message</label>
+            <textarea name="message" class="form-textarea" placeholder="Tell us about your project or request..." required></textarea>
+          </div>
+          <button type="submit" class="btn-gold" style="width:100%;padding:1rem;" id="submitBtn">Send Message</button>
+          <p id="formSuccess" style="display:none;margin-top:1rem;font-size:0.75rem;color:#c9a84c;letter-spacing:0.1em;text-align:center;">✦ Message sent! We'll be in touch soon.</p>
+          <p id="formError" style="display:none;margin-top:1rem;font-size:0.75rem;color:#e06c6c;letter-spacing:0.1em;text-align:center;">Something went wrong. Please try again.</p>
         </form>
       </div>
     </div>
   </div>
 </section>
 
+<!-- FOOTER -->
 <div class="gold-rule"></div>
 <footer>
   <div class="footer-inner">
     <div class="footer-logo">The Therapist Lobby</div>
-    <div class="footer-copy">© 2026 The Therapist Lobby. All rights reserved.</div>
+    <div class="footer-copy">© 2025 The Therapist Lobby. All rights reserved.</div>
+    <div class="footer-tagline">Your one click for everything.</div>
   </div>
 </footer>
 
 <script>
+  // Scroll reveal
   const reveals = document.querySelectorAll('.reveal');
   const observer = new IntersectionObserver((entries) => {
-    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); } });
+    entries.forEach(e => {
+      if (e.isIntersecting) { e.target.classList.add('visible'); }
+    });
   }, { threshold: 0.12 });
   reveals.forEach(r => observer.observe(r));
+
+  // Logo upload
+  document.getElementById('logoFileInput').addEventListener('change', function(e) {
+    const file = e.target.files[0];
+    if (!file) return;
+    const reader = new FileReader();
+    reader.onload = function(ev) {
+      const src = ev.target.result;
+      // Nav logo
+      const navImg = document.getElementById('navLogoImg');
+      navImg.src = src;
+      navImg.classList.add('loaded');
+      // Hero logo
+      const heroImg = document.getElementById('heroLogoImg');
+      heroImg.src = src;
+      document.getElementById('heroLogoWrap').classList.add('show');
+      // Save to sessionStorage so it persists on scroll
+      sessionStorage.setItem('ttl_logo', src);
+    };
+    reader.readAsDataURL(file);
+  });
+
+  // Restore logo if already uploaded this session
+  const savedLogo = sessionStorage.getItem('ttl_logo');
+  if (savedLogo) {
+    const navImg = document.getElementById('navLogoImg');
+    navImg.src = savedLogo; navImg.classList.add('loaded');
+    const heroImg = document.getElementById('heroLogoImg');
+    heroImg.src = savedLogo;
+    document.getElementById('heroLogoWrap').classList.add('show');
+  }
+  // Contact form via Formspree
+  const contactForm = document.getElementById('contactForm');
+  if (contactForm) {
+    contactForm.addEventListener('submit', async function(e) {
+      e.preventDefault();
+      const btn = document.getElementById('submitBtn');
+      const success = document.getElementById('formSuccess');
+      const error = document.getElementById('formError');
+      btn.textContent = 'Sending...';
+      btn.disabled = true;
+      success.style.display = 'none';
+      error.style.display = 'none';
+      try {
+        const res = await fetch('https://formspree.io/f/xdayqapp', {
+          method: 'POST',
+          headers: { 'Accept': 'application/json' },
+          body: new FormData(contactForm)
+        });
+        if (res.ok) {
+          success.style.display = 'block';
+          contactForm.reset();
+        } else {
+          error.style.display = 'block';
+        }
+      } catch {
+        error.style.display = 'block';
+      }
+      btn.textContent = 'Send Message';
+      btn.disabled = false;
+    });
+  }
+
+  document.querySelectorAll('a[href^="#"]').forEach(a => {
+    a.addEventListener('click', e => {
+      e.preventDefault();
+      const target = document.querySelector(a.getAttribute('href'));
+      if (target) target.scrollIntoView({ behavior: 'smooth' });
+    });
+  });
 </script>
 </body>
 </html>
